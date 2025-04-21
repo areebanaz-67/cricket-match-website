@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cricket Dashboard - Scoreboard</title>
+  <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+  <h1>Live Scores</h1>
+  <ul>
+    <% recentMatches.forEach(match => { %>
+      <li>
+        <strong>Name:</strong> <%= match.name %><br>
+        <strong>Match Type:</strong> <%= match.matchType %><br>
+        <strong>Status:</strong> <%= match.status %>
+        <strong>Venue:</strong> <%= match.venue %>
+        <strong>Date:</strong> <%= match.date %>
+        <strong>Teams:</strong> <%= match.teams.join(' vs ') %>
+        <strong>Match Started:</strong> <%= match.matchStarted %>
+        <strong>Match Ended:</strong> <%= match.matchEnded %>
+
+      </li>
+      <hr>
+    <% }) %>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cricket Dashboard - Series</title>
+  <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <h1>Cricket Dashboard</h1>
+      <ul class="nav-links">
+        <li><a href="/series">Series</a></li>
+        <li><a href="/scoreboard">Scoreboard</a></li>
+        <li><a href="/teams">Teams</a></li>
+        <li><a href="/player">Players</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <h1>Upcoming Series</h1>
+
+  <% serieslist.forEach(series => { %>
+    <li>
+      <strong>Name:</strong> <%= series.name %><br>
+      <strong>Series Date:</strong> (Start: <%= series.startDate %>, End: <%= series.endDate %>)<br>
+      <strong>ODIs</strong>  <%= series.odiNumber %> | T20s: <%= series.t20Number %> | Tests: <%= series.testNumber %>
+      <strong> Squads Announced: </strong> <%= series.squads %> | Matches Played: <%= series.matches %>
+    </li>
+    <hr>
+  <% }) %>
+ </ul>
+
+  </main>
+  
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cricket Dashboard - Teams</title>
+  <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+  <h1>Teams</h1>
+
+  <ul>
+    <strong>Series Name:</strong><% seriesName %>
+    <% for (const player of players) { %>
+      <li><a href="/players/<%= player._id %>"><%= player.name %></a> </li> 
+    <% } %>
+  </ul>
+
+</body>
+</html>
